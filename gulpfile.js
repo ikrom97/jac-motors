@@ -62,6 +62,7 @@ const copy = (done) => {
   src([
     'src/fonts/*.{woff2,woff}',
     'src/favicon.ico',
+    'src/video/**/*.mp4',
     'src/manifest.webmanifest',
     'src/img/**/*.svg',
     '!src/img/icons/*.svg',

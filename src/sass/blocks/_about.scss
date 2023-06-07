@@ -1,0 +1,15 @@
+.about {
+  padding: 24px 0;
+
+  @include tablet {
+    padding: 32px 0;
+  }
+
+  @include desktop {
+    padding: 40px 0;
+  }
+}
+
+.about__title {
+  text-align: start;
+}

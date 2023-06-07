@@ -3,6 +3,7 @@
   font-size: 16px;
   line-height: 1.4;
   font-family: "DIN Pro", "Arial", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .page__body {
@@ -11,6 +12,7 @@
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   background-color: #f1f1f1;
+  overflow-x: hidden;
 
   &::-webkit-scrollbar {
     width: 8px;
