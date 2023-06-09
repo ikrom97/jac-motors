@@ -5,10 +5,18 @@
 .model-card__image {
   display: block;
   width: 100%;
-  height: auto;
+  height: 140px;
   aspect-ratio: 5/2;
   object-fit: contain;
   margin-bottom: 8px;
+
+  @include tablet {
+    height: 400px;
+  }
+
+  @include desktop {
+    height: 600px;
+  }
 }
 
 .model-card__title {

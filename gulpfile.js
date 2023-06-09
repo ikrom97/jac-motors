@@ -44,7 +44,7 @@ const optimizeImages = () => src('src/img/**/*.{png,jpeg,jpg,svg}')
   ]))
   .pipe(dest('build/img'));
 
-const copyImages = () => src('src/img/**/*.{png,jpeg,jpg,svg}')
+const copyImages = () => src('src/img/**/*.{png,jpeg,jpg,svg,webp}')
   .pipe(dest('build/img'));
 
 const buildWebp = () => src('src/img/**/*.{jpeg,jpg,png}')
@@ -101,13 +101,12 @@ const runWatcher = () => {
 exports.build = series(
   clean,
   copy,
-  optimizeImages,
+  copyImages,
   parallel(
     buildStyles,
     buildHtml,
     buildScripts,
-    buildSprite,
-    buildWebp,
+    buildSprite
   ),
 );
 
