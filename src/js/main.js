@@ -41,3 +41,25 @@ document.querySelector('.modal__form')
     evt.preventDefault();
     document.body.classList.remove('modal-shown');
   });
+
+let inactivityTime = function () {
+  let time;
+  window.onload = resetTimer;
+  document.addEventListener('mousemove', () => {
+    resetTimer();
+  });
+  document.addEventListener('keypress', () => {
+    resetTimer();
+  });
+
+  function logout() {
+    document.body.classList.add('modal-shown');
+  }
+  function resetTimer() {
+    clearTimeout(time);
+    time = setTimeout(logout, 10000)
+  }
+};
+window.onload = function () {
+  inactivityTime();
+}
