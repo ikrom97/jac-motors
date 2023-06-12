@@ -63,3 +63,11 @@ let inactivityTime = function () {
 window.onload = function () {
   inactivityTime();
 }
+
+document.querySelector('select').addEventListener('change', (evt) => {
+  if (evt.target.value === 'E-J7') {
+    document.querySelector('dialog img').src = './img/banner-2.webp';
+    return;
+  }
+  document.querySelector('dialog img').src = './img/banner-1.webp';
+});
