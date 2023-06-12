@@ -33,12 +33,12 @@
 
   @include tablet {
     display: block;
-    width: 240px;
+    width: 440px;
     transform: scale(1.01);
   }
 
   @include desktop {
-    width: 640px;
+    width: 800px;
     height: 64vh;
   }
 }
